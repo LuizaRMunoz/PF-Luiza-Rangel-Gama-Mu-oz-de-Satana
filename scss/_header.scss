@@ -1,0 +1,29 @@
+header {
+    grid-area: headerindex;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    .logo {
+        @include flexible (flex, row, wrap, center, center);
+        margin: auto;
+    }
+    div {
+        img {
+            width: 50%;
+        }
+    }
+    .links {
+        @include flexible (flex, row, nowrap, space-between, normal);
+        li {
+            @include headernav;
+            &:hover {
+                background-color: map-get($map: $color, $key: "hover" );
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                font-family: map-get($map: $fuente, $key:"principal" );
+            }
+        }
+    }
+}
