@@ -1,0 +1,23 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexible ($dis, $direction, $corte, $just, $align,) {
+    display: $dis;
+    flex-flow: $direction $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin grid ($columnas) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin headernav {
+    list-style-type: none;
+    background-color: map-get($map: $color, $key: "beige" );
+    border-radius: 5px;
+}
