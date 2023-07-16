@@ -5,6 +5,13 @@
   grid-template-areas: "headerindex headerindex headerindex" "mainindex mainindex mainindex" "footerindex footerindex footerindex";
 }
 
+#bodypromo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 2fr 0.6fr;
+  grid-template-areas: "headerindex headerindex headerindex" "mainpromo mainpromo mainpromo" "footerindex footerindex footerindex";
+}
+
 header {
   grid-area: headerindex;
   display: grid;
@@ -81,8 +88,53 @@ header .links li a {
   }
 }
 
+.mainpromo {
+  grid-area: mainpromo;
+  margin-top: 1%;
+}
+.mainpromo .faja {
+  background-color: #DFD7BF;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: normal;
+}
+@media screen and (max-width: 468px) {
+  .mainpromo .faja h1 {
+    font-size: medium;
+  }
+}
+.mainpromo section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: normal;
+  width: 90%;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .mainpromo section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: normal;
+    row-gap: 3rem;
+    column-gap: 6rem;
+  }
+}
+.mainpromo section img {
+  width: 20%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .mainpromo section img {
+    width: 27%;
+    object-fit: cover;
+  }
+}
+
 footer {
-  background-color: #F2EAD3;
+  background-color: #DFD7BF;
   font-family: helvetica;
   font-size: xx-small;
   grid-area: footerindex;
@@ -90,6 +142,11 @@ footer {
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: normal;
+}
+@media screen and (max-width: 468px) {
+  footer {
+    font-size: 0.4rem;
+  }
 }
 
 body {

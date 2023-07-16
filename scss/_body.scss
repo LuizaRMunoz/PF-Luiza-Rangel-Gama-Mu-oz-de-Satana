@@ -6,3 +6,12 @@
     "mainindex mainindex mainindex"
     "footerindex footerindex footerindex";
 }
+
+#bodypromo {
+    @include grid (3);
+    grid-template-rows: 0.5fr 2fr 0.6fr;
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "mainpromo mainpromo mainpromo"
+    "footerindex footerindex footerindex";
+}

@@ -1,7 +1,10 @@
 footer {
-    background-color: map-get($map: $color, $key: "beige" );
+    background-color: map-get($map: $color, $key: "marrónsuave" );
     font-family: map-get($map: $fuente, $key: "main" );
     font-size: xx-small;
     grid-area: footerindex;
     @include flexible (flex, column, nowrap, flex-end, normal);
+    @include mq {
+        font-size: 0.4rem;
+    }
 }
