@@ -40,6 +40,11 @@ header .links li a {
   color: black;
   font-family: sans-serif;
 }
+@media screen and (max-width: 468px) {
+  header .links li a {
+    font-size: small;
+  }
+}
 
 .mainindex {
   display: flex;
@@ -52,8 +57,28 @@ header .links li a {
   width: 70%;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .mainindex #contenedor {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 468px) {
+  .mainindex #contenedor {
+    width: 85%;
+  }
+}
 .mainindex .contenido {
   font-family: helvetica;
+}
+@media screen and (max-width: 468px) {
+  .mainindex div h1 {
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 468px) {
+  .mainindex div p {
+    font-size: small;
+  }
 }
 
 footer {

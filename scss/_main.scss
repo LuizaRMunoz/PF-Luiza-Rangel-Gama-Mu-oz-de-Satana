@@ -4,8 +4,25 @@
     #contenedor {
         width: 70%;
         margin: 0 auto;
+        @include mq (768px) {
+            width: 80%;
+        }
+        @include mq {
+            width: 85%;
+        }
     }
     .contenido {
         font-family: map-get($map: $fuente, $key: "main" );
     }
+    div {
+        h1 {
+            @include mq {font-size: medium;}
+        }
+        p {
+            @include mq {font-size: small;}
+        }
+    } 
+  
+   
+    
 }

@@ -23,6 +23,9 @@ header {
                 text-decoration: none;
                 color: black;
                 font-family: map-get($map: $fuente, $key:"principal" );
+                @include mq {
+                    font-size: small;
+                }
             }
         }
     }
