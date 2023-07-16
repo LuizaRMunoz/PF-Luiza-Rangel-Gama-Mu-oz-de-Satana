@@ -12,6 +12,13 @@
   grid-template-areas: "headerindex headerindex headerindex" "mainpromo mainpromo mainpromo" "footerindex footerindex footerindex";
 }
 
+#bodyayc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 0.8fr 1.16fr;
+  grid-template-areas: "headerindex headerindex headerindex" "mainayc mainayc mainayc" "footerayc footerayc footerayc";
+}
+
 header {
   grid-area: headerindex;
   display: grid;
@@ -88,11 +95,7 @@ header .links li a {
   }
 }
 
-.mainpromo {
-  grid-area: mainpromo;
-  margin-top: 1%;
-}
-.mainpromo .faja {
+.faja {
   background-color: #DFD7BF;
   display: flex;
   flex-flow: row nowrap;
@@ -100,9 +103,14 @@ header .links li a {
   align-items: normal;
 }
 @media screen and (max-width: 468px) {
-  .mainpromo .faja h1 {
+  .faja h1 {
     font-size: medium;
   }
+}
+
+.mainpromo {
+  grid-area: mainpromo;
+  margin-top: 1%;
 }
 .mainpromo section {
   display: flex;
@@ -133,6 +141,14 @@ header .links li a {
   }
 }
 
+.mainayc {
+  grid-area: mainayc;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: normal;
+}
+
 footer {
   background-color: #DFD7BF;
   font-family: helvetica;
@@ -146,6 +162,49 @@ footer {
 @media screen and (max-width: 468px) {
   footer {
     font-size: 0.4rem;
+  }
+}
+
+#piedepagina {
+  background-color: #DFD7BF;
+  grid-area: footerayc;
+  font-size: medium;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: normal;
+  align-items: normal;
+  row-gap: 8rem;
+}
+#piedepagina .divfooter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 320px) {
+  #piedepagina .divfooter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 468px) {
+  #piedepagina h2 {
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 468px) {
+  #piedepagina ul li {
+    font-size: 0.7rem;
+  }
+}
+#piedepagina h3 {
+  font-size: small;
+}
+@media screen and (max-width: 468px) {
+  #piedepagina h3 {
+    font-size: x-small;
   }
 }
 

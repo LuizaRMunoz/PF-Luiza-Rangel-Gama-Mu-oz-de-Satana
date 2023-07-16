@@ -15,3 +15,13 @@
     "mainpromo mainpromo mainpromo"
     "footerindex footerindex footerindex";
 }
+
+#bodyayc {
+    @include grid (3);
+    grid-template-rows: 1fr 0.8fr 1.16fr;
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "mainayc mainayc mainayc"
+    "footerayc footerayc footerayc"
+    ;
+}

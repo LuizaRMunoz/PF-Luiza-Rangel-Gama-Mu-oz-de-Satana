@@ -24,16 +24,17 @@
     } 
 }
 
+.faja {
+    background-color: map-get($map: $color, $key: "marrónsuave" );
+    @include flexible (flex, row, nowrap, center, normal);
+    h1 {
+        @include mq {font-size: medium}
+    }
+} 
+
 .mainpromo {
     grid-area: mainpromo;
     margin-top: 1%;
-    .faja {
-        background-color: map-get($map: $color, $key: "marrónsuave" );
-        @include flexible (flex, row, nowrap, center, normal);
-        h1 {
-            @include mq {font-size: medium}
-        }
-    }
     section {
         @include flexible (flex, row, nowrap, space-around, normal);
         width: 90%;
@@ -52,4 +53,9 @@
             }
         }
     }
+}
+
+.mainayc {
+    grid-area: mainayc;
+    @include flexible (flex, row, nowrap, center, normal);
 }
