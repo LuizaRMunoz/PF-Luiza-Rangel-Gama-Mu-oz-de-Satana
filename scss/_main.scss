@@ -1,0 +1,11 @@
+.mainindex {
+    @include flexible (flex, column, nowrap, center, center);
+    grid-area: mainindex;
+    #contenedor {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .contenido {
+        font-family: map-get($map: $fuente, $key: "main" );
+    }
+}

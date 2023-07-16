@@ -1,3 +1,10 @@
+#bodyindex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 0.5fr;
+  grid-template-areas: "headerindex headerindex headerindex" "mainindex mainindex mainindex" "footerindex footerindex footerindex";
+}
+
 header {
   grid-area: headerindex;
   display: grid;
@@ -32,6 +39,32 @@ header .links li a {
   text-decoration: none;
   color: black;
   font-family: sans-serif;
+}
+
+.mainindex {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: mainindex;
+}
+.mainindex #contenedor {
+  width: 70%;
+  margin: 0 auto;
+}
+.mainindex .contenido {
+  font-family: helvetica;
+}
+
+footer {
+  background-color: #F2EAD3;
+  font-family: helvetica;
+  font-size: xx-small;
+  grid-area: footerindex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: normal;
 }
 
 body {
