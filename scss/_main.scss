@@ -122,18 +122,27 @@
             @include mq {font-size: 1rem}
         }
     }
-    div {
-        @include flexible (flex, row, wrap, space-around, center);
-        row-gap: 1rem;
+    section {
+        @include flexible (flex, row, nowrap, normal,normal);
         @include mq {
             @include flexible (flex, column, nowrap, space-between, center);
             row-gap: 4rem;
-        }
+    }
+    }  
+    div {
+        @include flexible (flex, column, wrap, space-around, center);
+        row-gap: 1rem;
         img {
-            
-            width: 30%;
+            width: 50%;
             object-fit: cover;
             margin-top: 3%;
+        }
+        .img2 {
+            @extend img ;
+            width: 56%;
+        }
+        p {
+            font-family: map-get($map: $fuente, $key: "main" );
         }
     }
 

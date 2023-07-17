@@ -46,7 +46,7 @@ header .logo {
   align-items: center;
   margin: auto;
 }
-header div img {
+header div img, header .mainreg div .img2, .mainreg header div .img2 {
   width: 50%;
 }
 header .links {
@@ -149,12 +149,12 @@ header .links li a {
     column-gap: 6rem;
   }
 }
-.mainpromo section img {
+.mainpromo section img, .mainpromo section .mainreg div .img2, .mainreg div .mainpromo section .img2 {
   width: 20%;
   object-fit: cover;
 }
 @media screen and (max-width: 768px) {
-  .mainpromo section img {
+  .mainpromo section img, .mainpromo section .mainreg div .img2, .mainreg div .mainpromo section .img2 {
     width: 27%;
     object-fit: cover;
   }
@@ -246,15 +246,14 @@ header .links li a {
     font-size: 1rem;
   }
 }
-.mainreg div {
+.mainreg section {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
-  row-gap: 1rem;
+  flex-flow: row nowrap;
+  justify-content: normal;
+  align-items: normal;
 }
 @media screen and (max-width: 468px) {
-  .mainreg div {
+  .mainreg section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -262,10 +261,23 @@ header .links li a {
     row-gap: 4rem;
   }
 }
-.mainreg div img {
-  width: 30%;
+.mainreg div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 1rem;
+}
+.mainreg div img, .mainreg div .img2 {
+  width: 50%;
   object-fit: cover;
   margin-top: 3%;
+}
+.mainreg div .img2 {
+  width: 56%;
+}
+.mainreg div p {
+  font-family: helvetica;
 }
 
 footer {
