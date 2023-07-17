@@ -19,6 +19,13 @@
   grid-template-areas: "headerindex headerindex headerindex" "mainayc mainayc mainayc" "footerayc footerayc footerayc";
 }
 
+#bodytips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 0.5fr;
+  grid-template-areas: "headerindex headerindex headerindex" "maintips maintips maintips" "footerindex footerindex footerindex";
+}
+
 header {
   grid-area: headerindex;
   display: grid;
@@ -147,6 +154,50 @@ header .links li a {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: normal;
+}
+
+.maintips {
+  grid-area: maintips;
+  margin-top: 3%;
+}
+.maintips div article {
+  font-family: helvetica;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: normal;
+  align-items: normal;
+  row-gap: 1.5rem;
+  margin-top: 3%;
+}
+.maintips div nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: normal;
+  margin-top: 5%;
+  list-style-type: none;
+}
+.maintips div nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: large;
+}
+.maintips .circulo {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #DFD7BF;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3%;
+}
+.maintips .circulo:hover {
+  background-color: #D7C0AE;
 }
 
 footer {
