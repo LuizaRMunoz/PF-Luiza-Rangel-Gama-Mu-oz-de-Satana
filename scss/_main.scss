@@ -29,12 +29,12 @@
     @include flexible (flex, row, nowrap, center, normal);
     h1 {
         @include mq {font-size: medium}
+        @include mq (768px) {font-size: 1.5rem;}
     }
 } 
 
 .mainpromo {
     grid-area: mainpromo;
-    margin-top: 1%;
     section {
         @include flexible (flex, row, nowrap, space-around, normal);
         width: 90%;
@@ -62,7 +62,6 @@
 
 .maintips {
     grid-area: maintips;
-    margin-top: 3%;
     div {
         article {
             font-family: map-get($map: $fuente, $key: "main");
@@ -110,4 +109,48 @@
             background-color: map-get($map: $color, $key: "hover" );
         }
     }
+}
+
+.mainreg {
+    grid-area: mainreg;
+    article {
+        h2{
+            font-family: map-get($map: $fuente, $key: "main");
+            text-align: center;
+            margin-top: 2%;
+            @include mq (768px) {font-size: 1.2rem}
+            @include mq {font-size: 1rem}
+        }
+    }
+    div {
+        @include flexible (flex, row, wrap, space-around, normal);
+        row-gap: 1rem;
+        @include mq {
+            @include flexible (flex, column, nowrap, space-between, center);
+            row-gap: 4rem;
+        }
+        img {
+            width: 30%;
+            object-fit: cover;
+            margin-top: 3%;
+        }
+    }
+    .section1reg {
+            position: absolute;
+            width: 70%;
+            left: 11%;
+            margin: 0 auto;
+            @include flexible (flex, row, nowrap, right, normal);
+            font-family: map-get($map: $fuente, $key: "main");
+            @include mq (768px) {
+                font-size: small;
+                right: 11%;
+            }
+        }
+    .section2reg {
+            @extend .section1reg;
+            right: 3%;
+            justify-content: left;  
+            @include mq (768px) {left: 5%;}
+        }
 }

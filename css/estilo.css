@@ -26,6 +26,13 @@
   grid-template-areas: "headerindex headerindex headerindex" "maintips maintips maintips" "footerindex footerindex footerindex";
 }
 
+#bodyreg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 0.5fr;
+  grid-template-areas: "headerindex headerindex headerindex" "mainreg mainreg mainreg" "footerindex footerindex footerindex";
+}
+
 header {
   grid-area: headerindex;
   display: grid;
@@ -115,10 +122,14 @@ header .links li a {
     font-size: medium;
   }
 }
+@media screen and (max-width: 768px) {
+  .faja h1 {
+    font-size: 1.5rem;
+  }
+}
 
 .mainpromo {
   grid-area: mainpromo;
-  margin-top: 1%;
 }
 .mainpromo section {
   display: flex;
@@ -159,7 +170,6 @@ header .links li a {
 
 .maintips {
   grid-area: maintips;
-  margin-top: 3%;
 }
 .maintips div article {
   font-family: helvetica;
@@ -216,6 +226,72 @@ header .links li a {
 }
 .maintips .circulo:hover {
   background-color: #D7C0AE;
+}
+
+.mainreg {
+  grid-area: mainreg;
+}
+.mainreg article h2 {
+  font-family: helvetica;
+  text-align: center;
+  margin-top: 2%;
+}
+@media screen and (max-width: 768px) {
+  .mainreg article h2 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 468px) {
+  .mainreg article h2 {
+    font-size: 1rem;
+  }
+}
+.mainreg div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: normal;
+  row-gap: 1rem;
+}
+@media screen and (max-width: 468px) {
+  .mainreg div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 4rem;
+  }
+}
+.mainreg div img {
+  width: 30%;
+  object-fit: cover;
+  margin-top: 3%;
+}
+.mainreg .section1reg, .mainreg .section2reg {
+  position: absolute;
+  width: 70%;
+  left: 11%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: right;
+  align-items: normal;
+  font-family: helvetica;
+}
+@media screen and (max-width: 768px) {
+  .mainreg .section1reg, .mainreg .section2reg {
+    font-size: small;
+    right: 11%;
+  }
+}
+.mainreg .section2reg {
+  right: 3%;
+  justify-content: left;
+}
+@media screen and (max-width: 768px) {
+  .mainreg .section2reg {
+    left: 5%;
+  }
 }
 
 footer {

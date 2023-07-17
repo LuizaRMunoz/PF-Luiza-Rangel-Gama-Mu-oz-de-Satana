@@ -35,3 +35,13 @@
     "footerindex footerindex footerindex"
     ;
 }
+
+#bodyreg {
+    @include grid (3);
+    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-areas: 
+    "headerindex headerindex headerindex"
+    "mainreg mainreg mainreg"
+    "footerindex footerindex footerindex"
+;
+}
