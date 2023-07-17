@@ -250,7 +250,7 @@ header .links li a {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  align-items: normal;
+  align-items: center;
   row-gap: 1rem;
 }
 @media screen and (max-width: 468px) {
@@ -266,32 +266,6 @@ header .links li a {
   width: 30%;
   object-fit: cover;
   margin-top: 3%;
-}
-.mainreg .section1reg, .mainreg .section2reg {
-  position: absolute;
-  width: 70%;
-  left: 11%;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: right;
-  align-items: normal;
-  font-family: helvetica;
-}
-@media screen and (max-width: 768px) {
-  .mainreg .section1reg, .mainreg .section2reg {
-    font-size: small;
-    right: 11%;
-  }
-}
-.mainreg .section2reg {
-  right: 3%;
-  justify-content: left;
-}
-@media screen and (max-width: 768px) {
-  .mainreg .section2reg {
-    left: 5%;
-  }
 }
 
 footer {
