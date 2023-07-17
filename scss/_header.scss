@@ -13,7 +13,8 @@ header {
         }
     }
     .links {
-        @include flexible (flex, row, nowrap, space-between, normal);
+        @include flexible (flex, row, wrap, space-between, normal);
+        padding: 0%;
         li {
             @include headernav;
             &:hover {
