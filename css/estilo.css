@@ -56,6 +56,15 @@ header .links {
   align-items: normal;
   padding: 0%;
 }
+@media screen and (max-width: 320px) {
+  header .links {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.5rem;
+  }
+}
 header .links li {
   list-style-type: none;
   background-color: #F2EAD3;
@@ -127,6 +136,11 @@ header .links li a {
     font-size: 1.5rem;
   }
 }
+@media screen and (max-width: 320px) {
+  .faja h1 {
+    font-size: 1.2rem;
+  }
+}
 
 .mainpromo {
   grid-area: mainpromo;
@@ -181,6 +195,11 @@ header .links li a {
   row-gap: 1.5rem;
   margin-top: 3%;
 }
+@media screen and (max-width: 320px) {
+  .maintips div article h2 {
+    font-size: 1.2rem;
+  }
+}
 @media screen and (max-width: 468px) {
   .maintips div article p {
     font-size: 0.85rem;
@@ -194,6 +213,14 @@ header .links li a {
   margin-top: 4%;
   list-style-type: none;
   padding: 0%;
+}
+@media screen and (max-width: 320px) {
+  .maintips div nav ul {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .maintips div nav ul li a {
   color: black;
@@ -246,6 +273,11 @@ header .links li a {
     font-size: 1rem;
   }
 }
+@media screen and (max-width: 320px) {
+  .mainreg article h2 {
+    font-size: 0.92rem;
+  }
+}
 .mainreg section {
   display: flex;
   flex-flow: row nowrap;
@@ -278,6 +310,11 @@ header .links li a {
 }
 .mainreg div p {
   font-family: helvetica;
+}
+@media screen and (max-width: 320px) {
+  .mainreg div p {
+    font-size: 0.8rem;
+  }
 }
 
 footer {
