@@ -1,5 +1,5 @@
 footer {
-    background-color: map-get($map: $color, $key: "marrónsuave" );
+    background-color: map-get($map: $color, $key: "footer" );
     font-family: map-get($map: $fuente, $key: "main" );
     font-size: xx-small;
     grid-area: footerindex;
@@ -10,28 +10,27 @@ footer {
 }
 
 #piedepagina {
-    background-color: map-get($map: $color, $key: "marrónsuave" );
+    background-color: map-get($map: $color, $key: "footer" );
     grid-area: footerayc;
-    font-size: medium;
+    font-size: 0.9rem;
     @include flexible (flex, column, nowrap, normal, normal);
     row-gap: 8rem;
     .divfooter {
-        @include flexible (flex, row, nowrap, space-around, center);
+        @include flexible (flex, row, nowrap, space-evenly, center);
         @include mq (320px) {
             @include flexible (flex, row, wrap, center, center );  
         }
     }
+    h1 {
+        font-size: large;
+    }
     h2 {
-        @include mq {font-size: medium;}
+        font-size: x-small;
     }
     ul {
         li {
             @include mq {font-size: 0.7rem;}
     }
-        }
-        h3 {
-            font-size: small;
-            @include mq {font-size: x-small;}
         }
     
     }

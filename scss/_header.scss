@@ -21,13 +21,12 @@ header {
         padding: 0%;
         li {
             @include headernav;
-           
             &:hover {
                 background-color: map-get($map: $color, $key: "hover" );
             }
             a {
                 text-decoration: none;
-                color: black;
+                color: whitesmoke;
                 font-family: map-get($map: $fuente, $key:"principal" );
                 @include mq {
                     font-size: small;

@@ -15,7 +15,7 @@
 #bodyayc {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 0.8fr 1.16fr;
+  grid-template-rows: 1fr 2fr 1.15fr;
   grid-template-areas: "headerindex headerindex headerindex" "mainayc mainayc mainayc" "footerayc footerayc footerayc";
 }
 
@@ -67,15 +67,15 @@ header .links {
 }
 header .links li {
   list-style-type: none;
-  background-color: #F2EAD3;
+  background-color: #331D2C;
   border-radius: 5px;
 }
 header .links li:hover {
-  background-color: #D7C0AE;
+  background-color: #3F2E3E;
 }
 header .links li a {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
   font-family: sans-serif;
 }
 @media screen and (max-width: 468px) {
@@ -105,8 +105,19 @@ header .links li a {
     width: 85%;
   }
 }
+@media screen and (max-width: 320px) {
+  .mainindex #contenedor {
+    width: 90%;
+  }
+}
 .mainindex .contenido {
   font-family: helvetica;
+}
+.mainindex div {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 468px) {
   .mainindex div h1 {
@@ -120,11 +131,15 @@ header .links li a {
 }
 
 .faja {
-  background-color: #DFD7BF;
+  background-color: #A78295;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: normal;
+  font-family: sans-serif;
+}
+.faja h1 {
+  color: whitesmoke;
 }
 @media screen and (max-width: 468px) {
   .faja h1 {
@@ -176,10 +191,42 @@ header .links li a {
 
 .mainayc {
   grid-area: mainayc;
+}
+.mainayc div {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  align-items: normal;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+}
+@media screen and (max-width: 468px) {
+  .mainayc div {
+    margin-top: 25%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mainayc div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.mainayc div img, .mainayc .mainreg div .img2, .mainreg .mainayc div .img2 {
+  width: 20%;
+}
+@media screen and (max-width: 769px) {
+  .mainayc div img, .mainayc .mainreg div .img2, .mainreg .mainayc div .img2 {
+    width: 42%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mainayc div img, .mainayc .mainreg div .img2, .mainreg .mainayc div .img2 {
+    width: 70%;
+  }
+}
+.mainayc div p {
+  font-family: sans-serif;
 }
 
 .maintips {
@@ -223,7 +270,7 @@ header .links li a {
   }
 }
 .maintips div nav ul li a {
-  color: black;
+  color: whitesmoke;
   text-decoration: none;
   font-size: large;
 }
@@ -236,7 +283,7 @@ header .links li a {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  background-color: #DFD7BF;
+  background-color: #331D2C;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -252,7 +299,7 @@ header .links li a {
   }
 }
 .maintips .circulo:hover {
-  background-color: #D7C0AE;
+  background-color: #3F2E3E;
 }
 
 .mainreg {
@@ -318,7 +365,7 @@ header .links li a {
 }
 
 footer {
-  background-color: #DFD7BF;
+  background-color: #EFE1D1;
   font-family: helvetica;
   font-size: xx-small;
   grid-area: footerindex;
@@ -334,9 +381,9 @@ footer {
 }
 
 #piedepagina {
-  background-color: #DFD7BF;
+  background-color: #EFE1D1;
   grid-area: footerayc;
-  font-size: medium;
+  font-size: 0.9rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: normal;
@@ -346,7 +393,7 @@ footer {
 #piedepagina .divfooter {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 @media screen and (max-width: 320px) {
@@ -357,22 +404,15 @@ footer {
     align-items: center;
   }
 }
-@media screen and (max-width: 468px) {
-  #piedepagina h2 {
-    font-size: medium;
-  }
+#piedepagina h1 {
+  font-size: large;
+}
+#piedepagina h2 {
+  font-size: x-small;
 }
 @media screen and (max-width: 468px) {
   #piedepagina ul li {
     font-size: 0.7rem;
-  }
-}
-#piedepagina h3 {
-  font-size: small;
-}
-@media screen and (max-width: 468px) {
-  #piedepagina h3 {
-    font-size: x-small;
   }
 }
 
