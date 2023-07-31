@@ -46,7 +46,7 @@ header .logo {
   align-items: center;
   margin: auto;
 }
-header div img, header .mainreg div .img2, .mainreg header div .img2 {
+header div img {
   width: 50%;
 }
 header .links {
@@ -165,33 +165,47 @@ header .links li a {
 .mainpromo {
   grid-area: mainpromo;
 }
-.mainpromo section {
+.mainpromo .flip {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: normal;
-  width: 90%;
-  margin: auto;
+  margin-top: 5%;
 }
-@media screen and (max-width: 768px) {
-  .mainpromo section {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: normal;
-    row-gap: 3rem;
-    column-gap: 6rem;
-  }
+.mainpromo .flip-card {
+  width: 245px;
+  height: 285px;
 }
-.mainpromo section img, .mainpromo section .mainreg div .img2, .mainreg div .mainpromo section .img2 {
-  width: 20%;
-  object-fit: cover;
+.mainpromo .flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transition: all 550ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform-style: preserve-3d;
 }
-@media screen and (max-width: 768px) {
-  .mainpromo section img, .mainpromo section .mainreg div .img2, .mainreg div .mainpromo section .img2 {
-    width: 27%;
-    object-fit: cover;
-  }
+.mainpromo .flip-card .flip-card-inner:hover {
+  transform: rotateY(-180deg);
+}
+.mainpromo .flip-card .flip-card-inner .flip-card-front, .mainpromo .flip-card .flip-card-inner .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 30px;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: hidden;
+}
+.mainpromo .flip-card .flip-card-inner .flip-card-back {
+  text-align: center;
+  padding: 32px;
+  background-color: #A78295;
+  transform: rotateY(-180deg);
+  font-family: helvetica;
+  color: whitesmoke;
+}
+.mainpromo img {
+  width: 100%;
 }
 
 .mainayc {
@@ -217,16 +231,16 @@ header .links li a {
     align-items: center;
   }
 }
-.mainayc div img, .mainayc .mainreg div .img2, .mainreg .mainayc div .img2 {
+.mainayc div img {
   width: 20%;
 }
 @media screen and (max-width: 769px) {
-  .mainayc div img, .mainayc .mainreg div .img2, .mainreg .mainayc div .img2 {
+  .mainayc div img {
     width: 42%;
   }
 }
 @media screen and (max-width: 320px) {
-  .mainayc div img, .mainayc .mainreg div .img2, .mainreg .mainayc div .img2 {
+  .mainayc div img {
     width: 70%;
   }
 }
@@ -367,10 +381,14 @@ header .links li a {
   align-items: center;
   row-gap: 1rem;
 }
-.mainreg div img, .mainreg div .img2 {
+.mainreg div .img1, .mainreg div .img2 {
   width: 50%;
   object-fit: cover;
   margin-top: 3%;
+  transition: transform 0.2s;
+}
+.mainreg div .img1:hover, .mainreg div .img2:hover {
+  transform: scale(0.8);
 }
 .mainreg div .img2 {
   width: 56%;

@@ -27,3 +27,8 @@
       @content;
     }
 }
+
+@mixin tamaño ($width, $height) {
+    width: $width;
+    height: $height;
+}
