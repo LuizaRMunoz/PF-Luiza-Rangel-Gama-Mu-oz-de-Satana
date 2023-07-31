@@ -3,7 +3,7 @@ footer {
     font-family: map-get($map: $fuente, $key: "main" );
     font-size: xx-small;
     grid-area: footerindex;
-    @include flexible (flex, column, nowrap, flex-end, normal);
+    @include flexible (flex, row-reverse, wrap, space-between, flex-end);
     @include mq {
         font-size: 0.4rem;
     }
@@ -13,18 +13,24 @@ footer {
     background-color: map-get($map: $color, $key: "footer" );
     grid-area: footerayc;
     font-size: 0.9rem;
-    @include flexible (flex, column, nowrap, normal, normal);
+    @include flexible (flex, column, nowrap, space-between, normal);
     row-gap: 8rem;
     .divfooter {
-        @include flexible (flex, row, nowrap, space-evenly, center);
+        @include flexible (flex, row, nowrap, space-evenly, flex-start);
         @include mq (320px) {
             @include flexible (flex, row, wrap, center, center );  
         }
+    }
+    .footerlogos {
+        @include flexible (flex, row-reverse, wrap, space-between, flex-end);
     }
     h1 {
         font-size: large;
     }
     h2 {
+        font-size: medium;
+    }
+    h3 {
         font-size: x-small;
     }
     ul {

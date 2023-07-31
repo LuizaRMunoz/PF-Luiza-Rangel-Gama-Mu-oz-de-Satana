@@ -13,14 +13,17 @@ header {
         }
     }
     .links {
-        @include mq (320px) {
+        @include mq (400px) {
             @include flexible (flex, column, wrap, center, center);
             row-gap: 0.5rem;
         }
-        @include flexible (flex, row, wrap, space-between, normal);
+        @include flexible (flex, row, nowrap, space-between, normal);
+        column-gap: 5rem;
         padding: 0%;
+        
         li {
             @include headernav;
+            padding: 4px;
             &:hover {
                 background-color: map-get($map: $color, $key: "hover" );
             }

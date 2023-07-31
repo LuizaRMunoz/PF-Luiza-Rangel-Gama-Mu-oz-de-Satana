@@ -1,9 +1,15 @@
 .mainindex {
     @include flexible (flex, column, nowrap, center, center);
     grid-area: mainindex;
+   
     #contenedor {
         width: 70%;
         margin: 0 auto;
+        border-radius: 50px;
+        background: #e0e0e0;
+        box-shadow:  10px 10px 23px #b1b1b1,
+                     -10px -10px 23px #ffffff;
+            
         @include mq (768px) {
             width: 80%;
         }
@@ -66,20 +72,28 @@
         @include flexible (flex, row, nowrap, space-around, center);
         margin-top: 2%;
         @include mq {margin-top: 25%;}
-        @include mq (320px) {
-            @include flexible (flex, column, wrap, space-around, center);
-        }
+        @include mq (320px) {@include flexible (flex, column, wrap, space-around, center);}
         img {
             width: 20%;
             @include mq (769px) {width: 42%;}
             @include mq (320px) {width: 70%;}
         }
-        p {
-            font-family: map-get($map: $fuente, $key: "principal" );
-            
+        .divmail {
+            @include flexible (flex, column, wrap, space-around, center);
+            background-color: map-get($map: $color, $key: "faja");
+            width: 30%;
+            padding: 5%;
         }
-    }
-
+        .mail {
+            width: 100% ;
+            padding: 5px;
+        }
+        h1, h2 {
+            font-family: map-get($map: $fuente, $key: "principal" );
+            font-size: medium;
+            margin-bottom: 10%;
+        }
+}
 }
 
 .maintips {
