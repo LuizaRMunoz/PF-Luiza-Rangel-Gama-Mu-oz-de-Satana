@@ -49,9 +49,22 @@
     .flip {
         @include flexible (flex, row, nowrap, space-evenly, normal);
         margin-top: 5%;
+        @include mq {
+            @include flexible (flex, column, wrap, space-evenly, center);
+            row-gap: 5rem;
+        }
+        @include mq (320px) {
+            margin-top: 2%;
+        }
     }
     .flip-card {
-        @include tamaño (245px, 285px);
+        @include tamaño (245px, 235px);
+        @include mq (768px) {
+            @include tamaño (155px, 135px);
+        }
+        @include mq (320px) {
+            @include tamaño (155px, 120px);
+        }
         .flip-card-inner {
             position: relative;
             @include tamaño (100%, 100%);
@@ -77,21 +90,26 @@
                 transform: rotateY(-180deg);
                 font-family: map-get($map: $fuente, $key:"main");
                 color: whitesmoke;
+                @include mq (768px) {
+                    font-size: 0.7rem;
+                }
             }
         }
     }  
     img {
         width: 100%;
     }
-    }
+}
 
 .mainayc {
     grid-area: mainayc;
     div {
         @include flexible (flex, row, nowrap, space-around, center);
         margin-top: 2%;
-        @include mq {margin-top: 25%;}
-        @include mq (320px) {@include flexible (flex, column, wrap, space-around, center);}
+        @include mq {
+            margin-top: 15%;
+            @include flexible (flex, column, wrap, space-evenly, center);
+        }
         img {
             width: 20%;
             @include mq (769px) {width: 42%;}
@@ -99,9 +117,11 @@
         }
         .divmail {
             @include flexible (flex, column, wrap, space-around, center);
+            align-content: center;
             background-color: map-get($map: $color, $key: "faja");
             width: 30%;
             padding: 5%;
+            @include mq {width: 65%;}
         }
         .mail {
             width: 100% ;
@@ -111,6 +131,7 @@
             font-family: map-get($map: $fuente, $key: "principal" );
             font-size: medium;
             margin-bottom: 10%;
+            @include mq {font-size: 0.78rem;}
         }
 }
 }

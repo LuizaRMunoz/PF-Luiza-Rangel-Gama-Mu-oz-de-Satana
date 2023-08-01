@@ -57,13 +57,13 @@ header .links {
   column-gap: 5rem;
   padding: 0%;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 468px) {
   header .links {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    row-gap: 0.5rem;
+    row-gap: 0.7rem;
   }
 }
 header .links li {
@@ -172,9 +172,35 @@ header .links li a {
   align-items: normal;
   margin-top: 5%;
 }
+@media screen and (max-width: 468px) {
+  .mainpromo .flip {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mainpromo .flip {
+    margin-top: 2%;
+  }
+}
 .mainpromo .flip-card {
   width: 245px;
-  height: 285px;
+  height: 235px;
+}
+@media screen and (max-width: 768px) {
+  .mainpromo .flip-card {
+    width: 155px;
+    height: 135px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .mainpromo .flip-card {
+    width: 155px;
+    height: 120px;
+  }
 }
 .mainpromo .flip-card .flip-card-inner {
   position: relative;
@@ -204,6 +230,11 @@ header .links li a {
   font-family: helvetica;
   color: whitesmoke;
 }
+@media screen and (max-width: 768px) {
+  .mainpromo .flip-card .flip-card-inner .flip-card-back {
+    font-size: 0.7rem;
+  }
+}
 .mainpromo img {
   width: 100%;
 }
@@ -220,14 +251,10 @@ header .links li a {
 }
 @media screen and (max-width: 468px) {
   .mainayc div {
-    margin-top: 25%;
-  }
-}
-@media screen and (max-width: 320px) {
-  .mainayc div {
+    margin-top: 15%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 }
@@ -249,9 +276,15 @@ header .links li a {
   flex-flow: column wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
   background-color: #A78295;
   width: 30%;
   padding: 5%;
+}
+@media screen and (max-width: 468px) {
+  .mainayc div .divmail {
+    width: 65%;
+  }
 }
 .mainayc div .mail {
   width: 100%;
@@ -261,6 +294,11 @@ header .links li a {
   font-family: sans-serif;
   font-size: medium;
   margin-bottom: 10%;
+}
+@media screen and (max-width: 468px) {
+  .mainayc div h1, .mainayc div h2 {
+    font-size: 0.78rem;
+  }
 }
 
 .maintips {
@@ -405,7 +443,7 @@ header .links li a {
 footer {
   background-color: #EFE1D1;
   font-family: helvetica;
-  font-size: xx-small;
+  font-size: 0.4rem;
   grid-area: footerindex;
   display: flex;
   flex-flow: row-reverse wrap;
@@ -414,7 +452,15 @@ footer {
 }
 @media screen and (max-width: 468px) {
   footer {
-    font-size: 0.4rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 468px) {
+  footer img {
+    width: 100%;
   }
 }
 

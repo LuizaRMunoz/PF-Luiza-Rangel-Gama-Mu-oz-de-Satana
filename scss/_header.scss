@@ -13,9 +13,9 @@ header {
         }
     }
     .links {
-        @include mq (400px) {
+        @include mq {
             @include flexible (flex, column, wrap, center, center);
-            row-gap: 0.5rem;
+            row-gap: 0.7rem;
         }
         @include flexible (flex, row, nowrap, space-between, normal);
         column-gap: 5rem;

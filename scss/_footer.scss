@@ -1,11 +1,14 @@
 footer {
     background-color: map-get($map: $color, $key: "footer" );
     font-family: map-get($map: $fuente, $key: "main" );
-    font-size: xx-small;
+    font-size: 0.4rem;
     grid-area: footerindex;
     @include flexible (flex, row-reverse, wrap, space-between, flex-end);
     @include mq {
-        font-size: 0.4rem;
+        @include flexible (flex, column, wrap, space-around, center);
+    }
+    img {
+    @include mq {width: 100%;}
     }
 }
 
