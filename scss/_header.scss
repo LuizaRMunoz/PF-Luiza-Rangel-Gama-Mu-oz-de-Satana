@@ -3,11 +3,15 @@ header {
     display: grid;
     justify-content: center;
     align-items: center;
+    width: 100%;
     .logo {
         @include flexible (flex, row, wrap, center, center);
         margin: auto;
     }
     div {
+        a {
+            @include flexible (flex, row, wrap, center, center);
+        }
         img {
             width: 50%;
         }
